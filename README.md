@@ -19,4 +19,3 @@ CSS
     * pressing the gif again, will allow it to stop
 4. You can also, generate a new series of animal gifs, if you fill out the form and press 'add an animal'
 
-## Deployed to portfolio
