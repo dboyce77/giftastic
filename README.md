@@ -4,7 +4,7 @@ Giftastic API image viewer
 ## Purpose
 I used the GIPHY API to make a dynamic web page that populates with gifs of your choice. I called the GIPHY API and used JavaScript and jQuery to change the HTML of my site.
 
-## Technoloy
+## Technolgy
 JavaScript
 Gifhy API
 JQuery
