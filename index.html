@@ -19,12 +19,33 @@
         input {
             margin: 10px;
         }
+
+        #gifs-1 {
+            float: left;
+            overflow: hidden;
+        }
+        #gifs-1 {
+            float: right;
+            overflow: hidden;
+        }
+        h1 {
+            color: royalblue;
+            font-size: 5em;
+        }
+        body {
+            background-color: lightgoldenrodyellow;
+        }
     </style>
 
 </head>
 
 <body>
     <div id="container">
+        <div class="row">
+            <div class="col">
+                <h1>Giftastic!</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 <div id="animals-view"></div>
@@ -42,10 +63,15 @@
                     <!--end of form-->
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="gifs-1"></div>
             </div>
-            <div class="row">
-                <div id="gifs-appear-here"></div>
+            <div class="col-md-6">
+                <div id="gifs-2"></div>
             </div>
+        </div>
 
         <script type="text/javascript" src="assets/js/app.js"></script>
 

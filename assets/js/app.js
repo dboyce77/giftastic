@@ -1,6 +1,6 @@
 // Initial array of animals
 var animals = ["Cat", "Dog", "Deer", "Dolphin"];
-var state = 'animate';
+var state = 'still';
 var animateURL = [];
 var stillURL = [];
 
@@ -55,6 +55,7 @@ function renderButtons() {
 $(document).on("click", 'button', function () {
     // Grabbing and storing the data-animal property value from the button
     var animal = $(this).attr("data-animal");
+    state = "still";
 
     // Constructing a queryURL using the animal name
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -67,7 +68,8 @@ $(document).on("click", 'button', function () {
     })
       // After data comes back from the request
       .then(function(response) {
-        $("#gifs-appear-here").empty();
+        $("#gifs-1").empty();
+        $('#gifs-2').empty();
 
         // storing the data from the AJAX request in the results variable
         results = response.data;
@@ -83,9 +85,10 @@ $(document).on("click", 'button', function () {
 
           // Creating and storing an image tag
           animalImage = $("<img>");
+          
           // Setting the src attribute of the image to a property pulled off the result item
-          if (state == 'still') { animalImage.attr("src", results[i].images.orginal_still.url); }
-          else { animalImage.attr("src", results[i].images.fixed_height.url); }
+          if (state == 'animate') { animalImage.attr("src", results[i].images.fixed_height.url); }
+          else { animalImage.attr("src", results[i].images.original_still.url ); }
           
           animateURL.push(results[i].images.fixed_height.url);
           stillURL.push(results[i].images.original_still.url);
@@ -95,7 +98,10 @@ $(document).on("click", 'button', function () {
           animalDiv.append(animalImage);
 
           // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-          $("#gifs-appear-here").prepend(animalDiv);
+          console.log('i = ' + i)
+          if (i === 0 || i === 2 || i === 4) { $("#gifs-1").prepend(animalDiv); } 
+          else {   $("#gifs-2").prepend(animalDiv); }
+        
         }
       });
 
