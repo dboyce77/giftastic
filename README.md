@@ -3,11 +3,12 @@
 ## Purpose
 I used the GIPHY API to make a dynamic web page that populates with gifs of your choice. I called the GIPHY API and used JavaScript and jQuery to change the HTML of my site.
 
-## Technoloy
-JavaScript
-Gifhy API
-JQuery
-CSS
+## Technology Used
+* HTML 
+* JavaScript
+* Gifhy API
+* JQuery
+* CSS
 
 ## Instructions 
 1. Clone this repository
@@ -20,4 +21,4 @@ CSS
 
 ## Deployed to portfolio
 
- * https://douglasboyce.github.io/Giftastic/
+ * https://github.com/douglasboyce/Giftastic/
